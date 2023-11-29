@@ -17,7 +17,7 @@ test('get started link', async ({ page }) => {
   await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
 });
 
-test('check Jave page', async ({page}) => {
+test.only('check Jave page', async ({page}) => {
 // 1. Open the page
   await page.goto('https://playwright.dev');
 // 2. Click at Get Started
@@ -31,6 +31,6 @@ test('check Jave page', async ({page}) => {
 // 6. Check the text "Installing Playwright" is not being displayed
   await expect(page.getByText('Installing Playwright', {exact:true})).not.toBeVisible();
 // 7. Check the text below is displayed
-  const javaDescription = "Playwright is distrybuted as a set of Maven modules."
+  const javaDescription = `Playwright is distributed as a set of Maven modules. The easiest way to use it is to add one dependency to your project's pom.xml as described below. If you're not familiar with Maven please refer to its documentation.`
   await expect(page.getByText(javaDescription)).toBeVisible();
 })
