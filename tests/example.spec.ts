@@ -31,4 +31,6 @@ test('check Jave page', async ({page}) => {
 // 6. Check the text "Installing Playwright" is not being displayed
   await expect(page.getByText('Installing Playwright', {exact:true})).not.toBeVisible();
 // 7. Check the text below is displayed
+  const javaDescription = "Playwright is distrybuted as a set of Maven modules."
+  await expect(page.getByText(javaDescription)).toBeVisible();
 })
