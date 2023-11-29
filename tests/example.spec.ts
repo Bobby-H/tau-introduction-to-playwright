@@ -21,6 +21,7 @@ test('check Jave page', async ({page}) => {
 // 1. Open the page
   await page.goto('https://playwright.dev');
 // 2. Click at Get Started
+  await page.getByRole('link', {name: 'Get Started'}).click();
 // 3. Mouse hover the language dropdown
 // 4. Click Java
 // 5. Check the URL
