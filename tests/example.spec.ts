@@ -23,6 +23,7 @@ test('check Jave page', async ({page}) => {
 // 2. Click at Get Started
   await page.getByRole('link', {name: 'Get Started'}).click();
 // 3. Mouse hover the language dropdown
+  await page.getByRole('button', {name: 'Node.js'}).hover();
 // 4. Click Java
 // 5. Check the URL
 // 6. Check the text "Installing Playwright" is not being displayed
