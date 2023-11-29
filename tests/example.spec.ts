@@ -29,5 +29,6 @@ test('check Jave page', async ({page}) => {
 // 5. Check the URL
   await expect(page).toHaveURL('https://playwright.dev/java/docs/intro');
 // 6. Check the text "Installing Playwright" is not being displayed
+  await expect(page.getByText('Installing Playwright', {exact:true})).not.toBeVisible();
 // 7. Check the text below is displayed
 })
