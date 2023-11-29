@@ -25,6 +25,7 @@ test('check Jave page', async ({page}) => {
 // 3. Mouse hover the language dropdown
   await page.getByRole('button', {name: 'Node.js'}).hover();
 // 4. Click Java
+  await page.getByText('Java', {exact: true}).click();
 // 5. Check the URL
 // 6. Check the text "Installing Playwright" is not being displayed
 // 7. Check the text below is displayed
